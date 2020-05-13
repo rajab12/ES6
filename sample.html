@@ -1,6 +1,14 @@
 <html>
 <head><title>Heading onto ES6</title></head>
 <body>
-
+<h1>undefined vs ReferenceError</h1>
+<p>
+<li>An undeclared variable is assigned the value undefined at execution and is also of type undefined.</li>
+<li>A ReferenceError is thrown when trying to access a previously undeclared variable.</li>
+</p>
+<script>
+console.log(typeof variable); // Output: undefined
+console.log(variable); // Output: ReferenceError: variable is not defined
+</script>
 </body>
 </html>
