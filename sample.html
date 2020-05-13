@@ -1,14 +1,55 @@
 <html>
 <head><title>Heading onto ES6</title></head>
 <body>
+
 <h1>undefined vs ReferenceError</h1>
 <p>
-<li>An undeclared variable is assigned the value undefined at execution and is also of type undefined.</li>
-<li>A ReferenceError is thrown when trying to access a previously undeclared variable.</li>
+<li>An undeclared variable is assigned the value undefined at execution and is also of type undefined.
+<pre>
+console.log(typeof variable); // Output: undefined
+</pre>
+</li>
+<li>A ReferenceError is thrown when trying to access a previously undeclared variable.
+<pre>
+console.log(variable); // Output: ReferenceError: variable is not defined
+</pre>
+</li>
+</p>
+
+<h1>Scope in JavaScript</h1>
+<p>
+Variables defined inside a function are in local scope while variables defined outside of a function are in the global scope. Each function when invoked creates a new scope.
+<pre>
+// the scope is by default global
+var name = 'Hammad';
+
+console.log(name); // logs 'Hammad'
+
+function logName() {
+    console.log(name); // 'name' is accessible here and everywhere else
+}
+
+logName(); // logs 'Hammad'
+</pre>
 </p>
 <script>
 console.log(typeof variable); // Output: undefined
 console.log(variable); // Output: ReferenceError: variable is not defined
+</script>
+
+<script>
+
+// the scope is by default global
+var name = 'Hammad';
+
+console.log(name); // logs 'Hammad'
+
+function logName() {
+    console.log(name); // 'name' is accessible here and everywhere else
+}
+
+logName(); // logs 'Hammad'
+
 </script>
 </body>
 </html>
